@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>For You</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== NAME GATE ===== -->
+  <!-- Shown first. She types her name here; if it matches the name set in
+       script.js (EXPECTED_NAME near the top), the gate fades and the real
+       page underneath is revealed. Change the image, wording, or the name
+       it checks against right here / in script.js. -->
+  <div class="gate" id="gate">
+    <div class="card gate-card">
+      <img src="images/gate-icon.png" alt="" class="gate-icon">
+      <p class="gate-line">This is just for one person.</p>
+      <h1 class="gate-title">Enter your name to open it</h1>
+      <form id="gateForm" class="gate-form">
+        <input type="text" id="gateInput" placeholder="Your name" autocomplete="off">
+        <button type="submit" class="primary-btn">Continue</button>
+      </form>
+      <p id="gateError" class="gate-error">That's not quite it — try again?</p>
+    </div>
+  </div>
+  <!-- ===================== -->
+
+  <div id="mainContent">
+
+  <!-- Background photo: set the path in style.css under .bg-layer, or
+       swap the file at images/background.jpg and keep this name. -->
+  <div class="bg-layer" aria-hidden="true"></div>
+
+  <div class="stage">
+
+    <div class="card message-card">
+      <span class="mark">Hi it's me josh! a small page, just for you</span>
+
+      <h1>Something I wanted to tell you</h1>
+
+      <!-- ===== EDIT YOUR MESSAGE HERE ===== -->
+      <p class="message-view">
+     Hello, Cheska. I made this message for you because I want to tell you something. I like you for the long term. You’ve been my crush for a long time, and I like you more than a friend. I know that I’m not asking for a chance from you, but I just want to confess my feelings for you.
+
+At isa pa, alam mo na naman siguro, noh, na matagal na kitang crush. That’s why gumawa ako ng something special na magiging memorable rin kahit papaano. It’s a simple website for you. Pero I’m really sorry for being makulit. Alam ko naman na pangit yun sa isang lalaki. I just want you to appreciate my feelings, feelings that haunt me every day, and this confession I made for you.
+
+Nung una pa lang, oo, super crush na kita. Pero I know that at the same time, that’s why nagkaroon ako ng courage na magsabi, from chat to personal, diba? I’m just being honest with you.
+
+In the long run, we will see. I made this message for you because I want to confess and be honest with you. I like you. Hope you appreciate my confession for you.
+
+That’s all. Thank youuu, have a nice day, and God bless.
+      </p>
+      <!-- =================================== -->
+    </div>
+
+    <div class="card photo-card">
+      <div class="gallery-head">
+        <span>A few pictures</span>
+      </div>
+
+      <!-- ===== PHOTOS =====
+           Each photo is one <button class="photo-tile"> block. To add a
+           picture: drop the image file into the images/ folder, then copy
+           one of these blocks, change the src to match your filename, and
+           write a caption. Up to about 10 looks best in the grid.
+           The lightbox (the enlarged pop-up view) reads the image and
+           caption straight from each button's own attributes, so nothing
+           else needs to change. -->
+
+      <div class="photo-grid">
+
+        <button type="button" class="photo-tile">
+          <img src="images/photo-1.jpg" alt="Photo 1">
+          <span class="tile-caption">Describe this one...</span>
+        </button>
+
+        <button type="button" class="photo-tile">
+          <img src="images/photo-2.jpg" alt="Photo 2">
+          <span class="tile-caption">Describe this one...</span>
+        </button>
+
+        <button type="button" class="photo-tile">
+          <img src="images/photo-3.png" alt="Photo 3">
+          <span class="tile-caption">Describe this one...</span>
+        </button>
+
+        <!-- Copy a block above and paste it here to add more photos -->
+
+      </div>
+      <!-- ================== -->
+
+    </div>
+
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">&times;</button>
+    <div class="lightbox-inner">
+      <img id="lightboxImg" src="" alt="">
+      <p id="lightboxCaption" class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  </div><!-- /#mainContent -->
+
+<script src="script.js"></script>
+</body>
+</html>
